@@ -1,0 +1,13 @@
+{
+  "name": "lesson3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arithmetics.js",
+  "scripts": {
+    "arith": "node arithmetics.js",
+    "logic": "node logical.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
