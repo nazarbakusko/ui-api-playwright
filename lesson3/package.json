@@ -5,6 +5,7 @@
   "main": "arithmetics.js",
   "scripts": {
     "arith": "node arithmetics.js",
+    "decision": "node decision-tree.js",
     "logic": "node logical.js"
   },
   "keywords": [],
