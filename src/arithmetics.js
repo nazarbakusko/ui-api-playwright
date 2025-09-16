@@ -49,4 +49,3 @@ console.log('num + bool:', a + undef);
 // parse
 const parsed = Number(e); // або parseInt(strNum1, 10)
 console.log('parsed e + a (explicit):', parsed + a);
-
