@@ -39,5 +39,5 @@ console.log('!boolTrue:', !boolTrue); // false
 console.log('!boolFalse:', !boolFalse); // true
 
 // --- Combined examples ---
-console.log('(num1 > num2) && (str2 === \'Hello\'):', (num1 > num2) && (str2 === 'Hello')); // true
-console.log('(num1 < num2) || (str1 === \'10\'):', (num1 < num2) || (str1 === '10')); // true
+console.log('(num1 > num2) && (str2 === \'Hello\'):', num1 > num2 && str2 === 'Hello'); // true
+console.log('(num1 < num2) || (str1 === \'10\'):', num1 < num2 || str1 === '10'); // true
