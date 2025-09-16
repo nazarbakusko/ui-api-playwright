@@ -6,29 +6,29 @@ const dayOfWeek = "Saturday";
 
 //if else
 if(num1 == num2) {
-    console.log('Num1 equals num2')
+    console.log('Num1 equals num2');
 } else {
-    console.log('Num1 not equals to num2')
+    console.log('Num1 not equals to num2');
 }
 
 // if-else if-else structure
 if(num1 == num2) {
-    console.log('Num1 equals num2')
+    console.log('Num1 equals num2');
 } else if(num1 < num2) {
-    console.log('Num2 greater than num1')
+    console.log('Num2 greater than num1');
 } else {
-    console.log('Num1 greater than num2')
+    console.log('Num1 greater than num2');
 }
 
 // if-else if-else structure
 if (temperature > 30 && !isRaining) {
-    console.log("It's hot and dry today — a great day for a walk!");
+  console.log("It's hot and dry today — a great day for a walk!");
 } else if (temperature > 20 && temperature <= 30) {
-    console.log("It's warm, you can go outside, but stay in the shade.");
+  console.log("It's warm, you can go outside, but stay in the shade.");
 } else if (temperature >= 10 && temperature <= 20) {
-    console.log("It's cool, wear a light jacket.");
+  console.log("It's cool, wear a light jacket.");
 } else {
-    console.log("It's cold! Better stay home or dress warmly.");
+  console.log("It's cold! Better stay home or dress warmly.");
 }
 
 // Using ternary operator
