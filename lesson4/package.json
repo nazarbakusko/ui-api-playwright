@@ -1,0 +1,14 @@
+{
+  "name": "lesson4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "loop": "node src/loop.js",
+    "array": "node src/arrays.js",
+    "object": "node src/objects.js"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
