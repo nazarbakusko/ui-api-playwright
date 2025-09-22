@@ -1,0 +1,14 @@
+{
+  "name": "lesson5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "function": "node src/functions.js",
+    "arrow": "node src/arrow-functions.js",
+    "getset": "node src/getter-setter.js"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
