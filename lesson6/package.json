@@ -1,0 +1,27 @@
+{
+  "name": "ui-api-playwright",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@stylistic/eslint-plugin": "^3.1.0",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.44.0"
+  },
+  "scripts": {
+    "arith": "node arithmetics.js",
+    "decision": "node decision-tree.js",
+    "switch": "node switch.js",
+    "logic": "node logical.js",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
