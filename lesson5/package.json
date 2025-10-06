@@ -2,6 +2,9 @@
   "name": "lesson5",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "function": "node src/functions.js",
@@ -9,6 +12,11 @@
     "getset": "node src/getter-setter.js"
 
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@stylistic/eslint-plugin": "^5.3.1",
+    "eslint": "^9.35.0",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "globals": "^16.4.0"
+  }
 }
