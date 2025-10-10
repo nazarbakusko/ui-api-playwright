@@ -1,21 +1,14 @@
+import { fetchFromUrl } from './async-await.js';
 
 async function fetchData(url, fallbackUrl) {
     try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Network error: ${response.status}`);
-        }
-        const data = await response.json();
+        const data = await fetchFromUrl(url);
         console.log("Data from first URL:", data);
         return data;
     } catch (error) {
         console.error("First url failed:", error);
         try {
-            const responseFallback = await fetch(fallbackUrl);
-            if (!responseFallback.ok) {
-                throw new Error(`Network error on fallbackUrl: ${responseFallback.status}`);
-            }
-            const dataFallback = await responseFallback.json();
+            const dataFallback = await fetchFromUrl(fallbackUrl);
             console.log("Data from first URL:", dataFallback);
             return dataFallback;
         } catch {

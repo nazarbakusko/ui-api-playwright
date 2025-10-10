@@ -1,23 +1,25 @@
 
-
 function processData(data) {
     console.log("Data processing:", data);
-
     return data.map(item => ({
         ...item,
         processed: true
     }));
 }
 
+export async function fetchFromUrl(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Network error: ${response.status}`);
+    }
+    const jsonData = await response.json();
+    return jsonData;
+}
+
 async function fetchData(url) {
     try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Network error: ${response.status}`);
-        }
-
-        const jsonData = await response.json();
-        const processed = processData(jsonData);
+        const data = await fetchFromUrl(url);
+        const processed = processData(data);
         return processed;
     } catch (error) {
         console.error("Error occurred:", error);
