@@ -1,17 +1,5 @@
-interface Rating {
-    rate: number;
-    count: number;
-}
-
-interface Product {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating: Rating;
-}
+import { Product } from './product';
+import { DiscountProduct } from './discount-product';
 
 async function fetchFromUrl(url: string): Promise<Product[]> {
     const response = await fetch(url);
@@ -32,8 +20,11 @@ async function fetchData(url: string): Promise<Product[] | undefined> {
 }
 
 (async () => {
-    const data = await fetchData('https://fakestoreapi.com/products');
-    console.log('Received and processed data:', data);
-    console.log(data?.find(p => p.id === 7)?.price);
+    const products = await fetchData('https://fakestoreapi.com/products');
+    if (!products) return;
+    const discounted = new DiscountProduct(products[0]);
+    console.log('Received and processed data:', products);
+    console.log(products?.find(p => p.id === 7)?.price);
+    console.log(discounted);
 })();
 
