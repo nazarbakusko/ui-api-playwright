@@ -1,15 +1,6 @@
 import { Engine } from './i-engine';
-
-export interface MotorcycleConfig {
-    brand: string;
-    model: string;
-    engineCapacity: number;
-    horsePower: number;
-    weight: number;
-    fuelCapacity: number;
-    fuelLevel: number;
-    engine: Engine;
-}
+import { MotorcycleConfig } from './i-motorcycle-config';
+export { MotorcycleConfig };
 
 export abstract class Motorcycle {
 
@@ -22,6 +13,8 @@ export abstract class Motorcycle {
     public fuelLevel: number;
     public engine: Engine;
     public isEngineRunning: boolean;
+    public sideStand: boolean;
+    public centralStand: boolean;
 
     public constructor(config: MotorcycleConfig) {
         this.brand = config.brand;
@@ -33,11 +26,32 @@ export abstract class Motorcycle {
         this.fuelCapacity = config.fuelCapacity;
         this.fuelLevel = config.fuelLevel;
         this.isEngineRunning = false;
+        this.sideStand = config.sideStand;
+        this.centralStand = config.centerStand;
     }
 
-    public abstract startEngine(): void;
-    public abstract stopEngine(): void;
+    public abstract parkBike(): void;
     public abstract ride(): void;
+
+    public startEngine(): void {
+        if (!this.isEngineRunning) {
+            this.isEngineRunning = true;
+            this.engine.isRunning = true;
+            console.log(`${this.brand} ${this.model} engine started!`);
+        } else {
+            throw new Error('Engine is running');
+        }
+    }
+
+    public stopEngine(): void {
+        if (this.isEngineRunning) {
+            this.isEngineRunning = false;
+            this.engine.isRunning = false;
+            console.log(`${this.brand} ${this.model} engine stopped!`);
+        } else {
+            throw new Error('Engine is off');
+        }
+    }
 
     public refuel(liters: number): void {
         const freeSpace: number = this.fuelCapacity - this.fuelLevel;
@@ -48,5 +62,4 @@ export abstract class Motorcycle {
         }
     }
 }
-
 

@@ -1,4 +1,4 @@
-import { Motorcycle, MotorcycleConfig } from './abstraction';
+import { Motorcycle, MotorcycleConfig } from './motorcycle';
 
 export class StreetBike extends Motorcycle {
 
@@ -6,31 +6,23 @@ export class StreetBike extends Motorcycle {
         super(config);
     }
 
-    public startEngine(): void {
-        if (!this.isEngineRunning) {
-            this.isEngineRunning = true;
-            this.engine.isRunning = true;
-            console.log(`${this.brand} ${this.model} engine started!`);
-        } else {
-            throw new Error('Engine is running');
-        }
-    }
-
-    public stopEngine(): void {
-        if (this.isEngineRunning) {
-            this.isEngineRunning = false;
-            this.engine.isRunning = false;
-            console.log(`${this.brand} ${this.model} engine stopped!`);
-        } else {
-            throw new Error('Engine is off');
-        }
-    }
-
     public ride(): void {
         if (this.isEngineRunning) {
             console.log(`${this.brand} ${this.model} is riding fast on the street!`);
         } else {
             console.log('Cannot ride, the engine is off!');
+        }
+    }
+
+    public stop(): void {
+        console.log(`Wow! ${this.brand} ${this.model} can do a stoppie!`);
+    }
+
+    public parkBike(): void {
+        if (this.sideStand) {
+            console.log(`Use the side stand to park your ${this.brand}!`);
+        } else {
+            console.log(`Use the central stand to park your ${this.brand}!`);
         }
     }
 }
