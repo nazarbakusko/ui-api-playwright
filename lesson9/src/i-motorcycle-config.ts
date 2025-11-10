@@ -1,6 +1,6 @@
 import { iEngine } from './i-engine';
 
-export interface MotorcycleConfig {
+export interface BaseMotorcycleConfig {
     brand: string;
     model: string;
     engineCapacity: number;

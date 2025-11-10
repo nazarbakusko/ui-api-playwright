@@ -1,6 +1,6 @@
 import { iEngine } from './i-engine';
 import { StreetBike } from './streetbike';
-import { MotorcycleConfig } from './i-motorcycle-config';
+import { BaseMotorcycleConfig } from './i-motorcycle-config';
 import { TourEnduroConfig } from './i-tourenduro-config';
 import { TourEnduro } from './tourenduro';
 import { testRide } from './test-ride';
@@ -21,7 +21,7 @@ const tenereEngine: iEngine = {
     isRunning: false
 };
 
-const streetBikeConfig: MotorcycleConfig = {
+const streetBikeConfig: BaseMotorcycleConfig = {
     brand: 'KTM',
     model: 'Duke 890',
     engineCapacity: 890,

@@ -1,6 +1,6 @@
-import { MotorcycleConfig } from './motorcycle';
+import { BaseMotorcycleConfig } from './i-motorcycle-config';
 
-export interface TourEnduroConfig extends MotorcycleConfig {
+export interface TourEnduroConfig extends BaseMotorcycleConfig {
     windShieldHeight: number;
     luggageCapacity: number;
     suspensionTravel: number;
