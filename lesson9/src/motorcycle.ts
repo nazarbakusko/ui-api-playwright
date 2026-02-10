@@ -1,6 +1,6 @@
 import { iEngine } from './i-engine';
-import { MotorcycleConfig } from './i-motorcycle-config';
-export { MotorcycleConfig };
+import { BaseMotorcycleConfig } from './i-motorcycle-config';
+export { BaseMotorcycleConfig };
 
 export abstract class Motorcycle {
 
@@ -16,7 +16,7 @@ export abstract class Motorcycle {
     protected sideStand: boolean;
     protected centralStand: boolean;
 
-    protected constructor(config: MotorcycleConfig) {
+    protected constructor(config: BaseMotorcycleConfig) {
         this.brand = config.brand;
         this.engine = config.engine;
         this.model = config.model;
