@@ -23,3 +23,5 @@ function arraySum(arr) {
 
 console.log("Sum:", arraySum(numArr));
 console.log("Sum:", arraySum(strArr));
+
+module.exports = { arraySum };

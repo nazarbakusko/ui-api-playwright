@@ -1,8 +1,8 @@
-import { Motorcycle, MotorcycleConfig } from './motorcycle';
+import { Motorcycle, BaseMotorcycleConfig } from './motorcycle';
 
 export class StreetBike extends Motorcycle {
 
-    public constructor(config: MotorcycleConfig) {
+    public constructor(config: BaseMotorcycleConfig) {
         super(config);
     }
 
